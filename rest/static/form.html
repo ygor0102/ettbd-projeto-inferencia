@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Formulário de Heart Attack</title>
+</head>
+<body>
+
+<div class="container mt-5">
+    <form method="POST" action="/model">
+        <div class="form-group">
+            <label for="age">Idade:</label>
+            <input type="number" name="age" class="form-control" min="0" required>
+        </div>
+
+        <div class="form-group">
+            <label for="sex">Sexo:</label>
+            <select name="sex" class="form-control" required>
+                <option value="0">Feminino</option>
+                <option value="1">Masculino</option>
+            </select>
+        </div>
+
+         <div class="form-group">
+          <label for="cp">Tipo de Dor no Peito:</label>
+          <select name="cp" class="form-control" required>
+              <option value="0">Angina típica</option>
+              <option value="1">Angina atípica</option>
+              <option value="2">Dor não anginosa</option>
+              <option value="3">Assintomática</option>
+          </select>
+      </div>
+
+        <div class="form-group">
+            <label for="trtbps">Pressão Arterial em Repouso:</label>
+            <input type="number" name="trtbps" class="form-control" min="0" required>
+        </div>
+
+      <div class="form-group">
+          <label for="chol">Colesterol:</label>
+          <input type="number" name="chol" class="form-control" min="0" required>
+      </div>
+
+      <div class="form-group">
+          <label for="fbs">Açúcar no Sangue em Jejum:</label>
+          <select name="fbs" class="form-control" required>
+              <option value="0">Menor que 120mg/dl</option>
+              <option value="1">Maior que 120mg/dl</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+          <label for="restecg">Eletrocardiografia em Repouso:</label>
+          <select name="restecg" class="form-control" required>
+              <option value="0">Normal</option>
+              <option value="1">Apresentando anormalidade de onda ST-T (inversões de onda T e/ou elevação ou depressão de > 0.05 mV)</option>
+              <option value="2">Mostrando hipertrofia ventricular esquerda provável ou definitiva pelos critérios de Estes</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+          <label for="thalachh">Frequência Cardíaca Máxima Atingida:</label>
+          <input type="number" name="thalachh" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+          <label for="exng">Angina Induzida por Exercício:</label>
+          <select name="exng" class="form-control" required>
+              <option value="0">Não</option>
+              <option value="1">Sim</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+          <label for="oldpeak">Depressão de ST Induzida por Exercício:</label>
+          <input type="number" name="oldpeak" step="0.1" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+          <label for="slp">Inclinação do Segmento ST:</label>
+          <select name="slp" class="form-control" required>
+              <option value="0">Descendente</option>
+              <option value="1">Plana</option>
+              <option value="2">Ascendente</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+          <label for="caa">Número de Vasos Principais Coloridos por Fluoroscopia:</label>
+          <select name="caa" class="form-control" required>
+              <option value="0">Nenhum</option>
+              <option value="1">Um</option>
+              <option value="2">Dois</option>
+              <option value="3">Três</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+          <label for="thall">Resultado da Thallium Stress Test:</label>
+          <select name="thall" class="form-control" required>
+              <option value="0">Normal</option>
+              <option value="1">Defeito fixo</option>
+              <option value="2">Defeito reversível</option>
+          </select>
+      </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Obter inferência</button>
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>           
+             
